@@ -14,6 +14,9 @@ public class Adder {
         for (String s : parts) {
             if (!s.trim().isEmpty()) {
                 int partInt = Integer.parseInt(s.trim());
+                if (partInt < 0) {
+                    throw new IllegalArgumentException("Non-negative integer expected");
+                }
                 sum += partInt;
             }
         }

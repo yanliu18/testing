@@ -61,7 +61,7 @@ public class AdderTest {
     @ParameterizedTest
     @ValueSource(strings = {"0,x", "x", "0, x, 1"})
     public void shouldThrowNumberFormatExceptionIfGivenNonIntInput(String arg) {
-        //assertThrows(NumberFormatException.class, () -> adder.add(arg));
+        assertThrows(NumberFormatException.class, () -> adder.add(arg));
     }
 
 /* ------------------------------------------------------------------------------------------
@@ -70,7 +70,7 @@ public class AdderTest {
 
     @Test
     public void shouldAddThreeIntegersCorrectly() {
-        //assertEquals(1 + 5 + 10, adder.add("1, 5,10"));
+        assertEquals(1 + 5 + 10, adder.add("1, 5,10"));
     }
 
 /* ------------------------------------------------------------------------------------------
@@ -80,6 +80,6 @@ public class AdderTest {
     @ParameterizedTest
     @ValueSource(strings = {"-1", "0, -1", "-1, -1"})
     public void shouldThrowIllegalArgumentExceptionWhenGivenNegativeInput() {
-        //assertThrows(IllegalArgumentException.class, () -> adder.add("-1"));
+        assertThrows(IllegalArgumentException.class, () -> adder.add("-1"));
     }
 }
