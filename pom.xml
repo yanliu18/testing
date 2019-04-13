@@ -95,10 +95,10 @@
                 </dependencies>
                 <configuration>
                     <targetClasses>
-                        <param>demo.simple.adder</param>
+                        <param>demo.simple.adder.*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>demo.simple.adder</param>
+                        <param>demo.simple.adder.*</param>
                     </targetTests>
                 </configuration>
             </plugin>
